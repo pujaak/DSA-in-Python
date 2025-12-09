@@ -46,7 +46,9 @@ def secondLargestElement3(nums):
         if nums[i] > largest:
             slargest = largest
             largest = nums[i]
-        elif nums[i] > slargest and nums[i] != largest:
+        # elif nums[i] > slargest and nums[i] != largest:
+        # or 
+        elif nums[i] < largest and nums[i] > slargest:
             slargest = nums[i]
             
     return slargest
